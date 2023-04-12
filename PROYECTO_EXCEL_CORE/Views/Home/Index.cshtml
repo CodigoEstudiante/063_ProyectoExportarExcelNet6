@@ -1,0 +1,34 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@*<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>*@
+
+
+<h2>Reporte de clientes</h2>
+<hr />
+<form asp-action="Exportar_Excel" asp-controller="Home" method="post">
+
+    <div class="row align-items-end">
+        <div class="col-sm-3">
+            <label class="form-label">Fecha Inicio</label>
+            <input class="form-control" name="fechaInicio" type="text" />
+        </div>
+
+        <div class="col-sm-3">
+            <label class="form-label">Fecha Fin</label>
+            <input class="form-control" name="fechaFin" type="text" />
+        </div>
+
+        <div class="col-sm-2">
+            <button class="btn btn-success" type="submit">Exportar Excel</button>
+        </div>
+    
+    </div>
+
+</form>
+<br />
+<hr />
